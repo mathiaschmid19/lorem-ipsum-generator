@@ -6,10 +6,27 @@ function App() {
   const [wordsPerParagraph, setWordsPerParagraph] = useState(50);
   const [generatedText, setGeneratedText] = useState('');
   const [startWithLorem, setStartWithLorem] = useState(true);
-  const [selectedLanguage, setSelectedLanguage] = useState('latin');
+  const [selectedLanguage, setSelectedLanguage] = useState('english');
 
   // Multi-language word banks
   const wordBanks = {
+    english: {
+      name: 'English',
+      words: [
+        'the', 'of', 'and', 'to', 'a', 'in', 'is', 'it', 'you', 'that', 'he', 'was',
+        'for', 'on', 'are', 'as', 'with', 'his', 'they', 'i', 'at', 'be', 'this',
+        'have', 'from', 'or', 'one', 'had', 'by', 'word', 'but', 'not', 'what',
+        'all', 'were', 'we', 'when', 'your', 'can', 'said', 'there', 'each',
+        'which', 'she', 'do', 'how', 'their', 'if', 'will', 'up', 'other', 'about',
+        'out', 'many', 'then', 'them', 'these', 'so', 'some', 'her', 'would',
+        'make', 'like', 'into', 'him', 'time', 'has', 'two', 'more', 'very',
+        'after', 'words', 'long', 'than', 'first', 'been', 'call', 'who', 'its',
+        'now', 'find', 'could', 'made', 'may', 'down', 'side', 'been', 'water',
+        'part', 'might', 'come', 'work', 'system', 'life', 'right', 'move',
+        'thing', 'place', 'little', 'want', 'hand', 'high', 'year', 'came',
+        'show', 'every', 'good', 'give', 'our', 'under', 'name', 'very', 'through'
+      ]
+    },
     latin: {
       name: 'Latin (Lorem Ipsum)',
       words: [
@@ -23,8 +40,7 @@ function App() {
         'deserunt', 'mollit', 'anim', 'id', 'est', 'laborum', 'at', 'vero', 'eos',
         'accusamus', 'accusantium', 'doloremque', 'laudantium', 'totam', 'rem',
         'aperiam', 'eaque', 'ipsa', 'quae', 'ab', 'illo', 'inventore', 'veritatis',
-        'et', 'quasi', 'architecto', 'beatae', 'vitae', 'dicta', 'sunt', 'explicabo',
-        'nemo', 'ipsam', 'quia', 'voluptas', 'aspernatur', 'aut', 'odit', 'fugit'
+        'et', 'quasi', 'architecto', 'beatae', 'vitae', 'dicta', 'sunt', 'explicabo'
       ]
     },
     french: {
